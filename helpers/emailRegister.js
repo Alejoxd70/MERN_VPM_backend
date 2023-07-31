@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 
 const emailRegister = async data  => {
     const transport = nodemailer.createTransport({
+        from: "VPM - Veterinary Patients Manager",
         host: process.env.EMAIL_HOST,
         port: process.env.EMAIL_PORT,
         auth: {
