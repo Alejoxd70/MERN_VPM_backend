@@ -2,7 +2,6 @@ import nodemailer from "nodemailer";
 
 const emailRegister = async data  => {
     const transport = nodemailer.createTransport({
-        from: "VPM - Veterinary Patients Manager",
         host: process.env.EMAIL_HOST,
         port: process.env.EMAIL_PORT,
         auth: {
@@ -15,7 +14,7 @@ const emailRegister = async data  => {
 
     //send email
     const info = await transport.sendMail({
-        from: "VPM - Veterinary Patients Manager",
+        from: '"APV - Administrador Pacientes Veterinaria" <apv@correo.com>',
         to: email,
         subject: "Comfirm your APV account",
         text: "Comfirm your APV account",
